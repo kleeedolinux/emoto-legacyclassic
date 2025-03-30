@@ -1,0 +1,499 @@
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+html,
+body {
+	font-family: "Segoe UI";
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+body {
+	background-image: url(img/3.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100% auto;
+	height: auto;
+	color: #398ce4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: auto;
+}
+
+#help {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#help:hover {
+	cursor: pointer;
+	color: gray;
+	animation: shake 0.1s;
+}
+
+dialog {
+	background-color: #326caa;
+	border: 0;
+	border-radius: 2px;
+	padding: 0.5rem;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	outline: none;
+	text-align: center;
+	max-width: 50%;
+	max-height: 100%;
+	text-shadow: 6px 6px 5px black;
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modalText {
+	text-align: center;
+	text-shadow: 6px 2px 6px black;
+}
+
+#modalCloseButton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0.5rem;
+	text-shadow: #000 0 0 5px;
+	font-size: 1.5rem;
+}
+
+#modalCloseButton:hover {
+	cursor: pointer;
+	color: #ff0000;
+	animation: shake 0.2s;
+}
+
+#github {
+	font-size: 3rem;
+}
+
+#github:hover {
+	cursor: pointer;
+	color: gray;
+	animation: shake 0.2s;
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: rgb(42, 42, 42);
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: rgb(42, 42, 42);
+}
+
+.container1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#title {
+	font-weight: 800;
+	text-shadow: 6px 12px 5px black;
+	text-align: center;
+	font-size: 4rem;
+	margin-top: auto;
+	text-transform: uppercase;
+	margin-bottom: -0.5rem;
+	cursor: pointer;
+}
+
+.peepoThink {
+	display: block;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	filter: drop-shadow(6px 6px 5px black);
+}
+
+.gaming {
+	display: block;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	filter: drop-shadow(6px 6px 5px black);
+}
+
+#subtitle {
+	font-weight: 600;
+	text-shadow: 6px 6px 5px black;
+	font-size: 0.8rem;
+	margin-top: auto;
+	margin-bottom: 1rem;
+	text-transform: lowercase;
+}
+#subtitle2 {
+	display: none;
+	font-weight: 600;
+	text-shadow: 6px 6px 5px black;
+	font-size: 1rem;
+	text-transform: lowercase;
+	color: rgb(158, 35, 162);
+}
+
+#channelInput {
+	font-weight: 700;
+	box-shadow: 6px 6px 5px black;
+	width: 100%;
+	border: 0;
+	background-color: #398ce4;
+	border-radius: 2px;
+	padding: 0.5rem;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	outline: none;
+	cursor: auto;
+	text-align: center;
+	max-width: 300px;
+}
+
+#channelInput:focus {
+	box-shadow: 0 0 0 1px #fff;
+}
+
+#channelInput::placeholder {
+	font-family: "Segoe UI";
+}
+
+#invalidChannel {
+	font-weight: 600;
+	color: #ff0000;
+}
+
+#loading {
+	user-drag: none;
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#loadingText {
+	font-weight: 600;
+}
+
+#app {
+	display: grid;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	grid-gap: 1.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+#emoteTryContainer {
+	position: relative;
+	display: none;
+	padding-top: -0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+#emoteTry {
+	box-shadow: 6px 6px 5px black;
+	width: auto;
+	border: 0;
+	background-color: #398ce4;
+	border-radius: 2px;
+	padding: 0.5rem;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	outline: none;
+	text-align: center;
+}
+
+.autocomplete-emotes {
+	position: absolute;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	background-color: rgb(32, 42, 49);
+	font-size: 1rem;
+	max-height: 100px;
+	max-width: 100%;
+	overflow-y: auto;
+}
+
+.autocomplete-emotes li {
+	padding: 8px;
+	font-weight: 600;
+}
+.autocomplete-emotes li:hover {
+	cursor: pointer;
+	background-color: #245992;
+}
+.autocomplete-emotes li:focus {
+	background-color: #245992;
+}
+
+#emoteTry:focus {
+	box-shadow: 0 0 0 1px #fff;
+}
+
+#blur {
+	font-size: 40px;
+	color: transparent;
+	text-shadow: 0 0 8px #000;
+}
+
+.card {
+	margin-top: -2rem;
+	width: 15rem auto;
+	background: rgb(29, 29, 29);
+	color: #398ce4;
+	padding: 1rem;
+	border-radius: 10px;
+	border-top: 1px solid #398ce4;
+	border-bottom: 1px solid #398ce4;
+	border-left: 1px solid #398ce4;
+	border-right: 1px solid #398ce4;
+	text-align: center;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	position: relative;
+	cursor: unset;
+}
+
+.card--image {
+	user-drag: none;
+	user-select: none;
+	width: auto;
+	display: block;
+	margin: auto;
+}
+
+.card--image2 {
+	user-drag: none;
+	user-select: none;
+	width: auto;
+	display: block;
+	margin: auto;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+}
+
+.card--image3 {
+	user-drag: none;
+	user-select: none;
+	width: auto;
+	display: block;
+	margin: auto;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+}
+
+.card--image4 {
+	user-drag: none;
+	user-select: none;
+	width: auto;
+	display: block;
+	margin: auto;
+}
+
+input[type="text"] {
+	background-color: #f1f1f1;
+}
+input[type="submit"] {
+	background-color: DodgerBlue;
+	color: #fff;
+}
+
+#score {
+	margin-top: 1rem;
+	align-items: center;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#tentativas {
+	color: rgb(191, 2, 2);
+	text-shadow: 6px 6px 5px black;
+}
+
+#vidas {
+	display: none;
+	align-items: center;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+#vida1 {
+	color: red;
+}
+#vida2 {
+	color: red;
+}
+#vida3 {
+	color: red;
+}
+#vida4 {
+	color: red;
+}
+
+#acertos {
+	margin-top: -1rem;
+	color: rgb(0, 128, 0);
+	text-shadow: 6px 6px 5px black;
+}
+
+#recorde {
+	padding: 5px;
+	align-items: center;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 6px 6px 5px black;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+#shoutout {
+	text-decoration: none;
+	margin-top: 1rem;
+}
+
+#twitch {
+	color: #fff;
+	text-decoration: none;
+}
+
+#twitch:hover {
+	color: #8339e4;
+}
+
+#twitch:active {
+	color: #8339e4;
+}
+
+.fa-github {
+	padding: 20px;
+	font-size: 20px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	color: white;
+}
+
+.fa-twitter {
+	padding: 20px;
+	font-size: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	color: #398ce4;
+}
+
+.fa-youtube-play {
+	padding: 20px;
+	font-size: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	color: #398ce4;
+}
+
+.fa-question-circle {
+	padding: 20px;
+	font-size: 2.5rem;
+	font-weight: 700;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	color: #398ce4;
+}
+
+.fa-question-circle:hover {
+	color: white;
+}
+
+.fa-twitter:hover {
+	color: #1da1f2;
+}
+.fa-github:hover {
+	color: black;
+}
+.fa-youtube-play:hover {
+	color: red;
+}
